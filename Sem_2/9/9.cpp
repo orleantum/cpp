@@ -51,7 +51,7 @@ int main() {
     {
         cout << "F1 opened for reading." << endl;
         
-        int counter = 0;
+        int counter = 1;
         while (!file_2.eof())
         {
             str1 = "";
