@@ -151,7 +151,7 @@ void writeList(SingleList* head) {
     ofstream file_1(path);  // можно открыть файл так, проще
 
     if (file_1.is_open()) {
-        cout << "F1 opened for writing." << endl;
+        cout << "11.1.txt opened for writing." << endl;
 
         SingleList* current = head;
         while (current != nullptr) {
@@ -160,7 +160,7 @@ void writeList(SingleList* head) {
         }
     }
     else {
-        cout << "Can't open F1.";
+        cout << "Can't open 11.1.txt";
     }
 
     file_1.close();
