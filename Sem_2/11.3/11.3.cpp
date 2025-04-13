@@ -17,7 +17,6 @@ struct Stack {
 		size = 0;
 	}
 
-	// Добавление элемента
 	void push(int data)
 	{
 		StackElem* cur = new StackElem;
@@ -55,7 +54,7 @@ struct Stack {
 
 	void writeStack() {
 		std::string path = "11.3.txt";
-		std::ofstream file_1(path);  // можно открыть файл так, проще
+		std::ofstream file_1(path);
 
 		if (file_1.is_open()) {
 			std::cout << "11.3.txt opened for writing" << std::endl;
