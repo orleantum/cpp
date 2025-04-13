@@ -3,13 +3,11 @@
 
 using namespace std;
 
-// Однонаправленный список
 struct SingleList {
     int data;
     SingleList* next;
 };
 
-// Функция для печати списка
 void printList(SingleList* head) {
     int counter = 0;
     while (head) {
@@ -20,7 +18,6 @@ void printList(SingleList* head) {
     cout << "nullptr\n";
 }
 
-// Функция заполнения списка
 SingleList* createList(int n)
 {
     SingleList* start = nullptr;
@@ -34,20 +31,19 @@ SingleList* createList(int n)
 
         if (i == 0)
         {
-            start = cur;  // первый элемент становится началом списка
+            start = cur;
         }
         else
         {
-            prev->next = cur;  // предыдущий указывает на текущий
+            prev->next = cur;
         }
 
-        prev = cur;  // текущий становится предыдущим для следующей итерации
+        prev = cur;
     }
 
     return start;
 }
 
-// Функция для восстановления списка из файла
 SingleList* RestoreList(const string& path) {
     ifstream file(path);
     if (!file.is_open()) {
@@ -63,12 +59,12 @@ SingleList* RestoreList(const string& path) {
         SingleList* newNode = new SingleList{ value, nullptr };
 
         if (!head) {
-            head = newNode;     // первый элемент
+            head = newNode;
             tail = newNode;
         }
         else {
             tail->next = newNode;
-            tail = newNode;     // передвигаем "хвост"
+            tail = newNode;
         }
     }
 
@@ -76,7 +72,6 @@ SingleList* RestoreList(const string& path) {
     return head;
 }
 
-// Функция удаления элемента по индексу
 void deleteNodeByIndex(SingleList*& head, int index) {
     if (head == nullptr || index < 0) return;
 
@@ -90,19 +85,17 @@ void deleteNodeByIndex(SingleList*& head, int index) {
 
     SingleList* current = head;
     for (int i = 0; i < index - 1; i++) {
-        if (current->next == nullptr) return; // индекс вне диапазона
+        if (current->next == nullptr) return;
         current = current->next;
     }
 
-    // current указывает на элемент перед тем, что нужно удалить
-    if (current->next == nullptr) return; // нет элемента по индексу
+    if (current->next == nullptr) return;
 
     SingleList* temp = current->next;
     current->next = temp->next;
     delete temp;
 }
 
-// Функция добавления элемента по индексу
 void insertNodeByIndex(SingleList*& head, int index, int value) {
     if (index < 0) return;
 
@@ -110,7 +103,6 @@ void insertNodeByIndex(SingleList*& head, int index, int value) {
     newNode->data = value;
     newNode->next = nullptr;
 
-    // Вставка в начало
     if (index == 0) {
         newNode->next = head;
         head = newNode;
@@ -120,14 +112,14 @@ void insertNodeByIndex(SingleList*& head, int index, int value) {
     SingleList* current = head;
     for (int i = 0; i < index - 1; i++) {
         if (current == nullptr) {
-            delete newNode; // индекс вне списка
+            delete newNode;
             return;
         }
         current = current->next;
     }
 
     if (current == nullptr) {
-        delete newNode; // индекс за пределами
+        delete newNode;
         return;
     }
 
@@ -135,17 +127,15 @@ void insertNodeByIndex(SingleList*& head, int index, int value) {
     current->next = newNode;
 }
 
-// Функция удаления списка 
 void deleteList(SingleList* head) {
     while (head != nullptr) {
-        SingleList* temp = head;    // сохраняем текущий узел
-        head = head->next;          // переходим к следующему
-        delete temp;                // удаляем текущий
+        SingleList* temp = head;
+        head = head->next;
+        delete temp;
     }
     cout << "The list is empty\n";
 }
 
-// Функция записи в файл
 void writeList(SingleList* head) {
     string path = "11.1.txt";
     ofstream file_1(path);  // можно открыть файл так, проще
