@@ -18,4 +18,9 @@
 | №11.4 | ✅ |  | 11.4 |
 | idef0 | ✅ | ✅ | idef0 |
 | №9 | ✅ |  | 9 |
+| Линейный поиск |  |  | LinearSearch |
+| Интерпроляционный поиск |  |  | InterpolationSearch |
+| Бинарный поиск |  |  | BinarySearch |
+| Кнут-Моррис |  |  | Knuth–Morris–Pratt algorithm |
+| Бойер-Мур |  |  | Boyer–Moore string-search algorithm |
 | **Сумма** |  |  |  |
