@@ -11,7 +11,6 @@ struct Stack {
 	StackElem* top;
 	int size;
 
-	// Начальная инициализация стека: он пуст
 	void init()
 	{
 		top = nullptr;
@@ -28,7 +27,6 @@ struct Stack {
 		size++;
 	}
 
-	// Удаление элемента
 	int pop()
 	{
 		if (top == nullptr) {
@@ -46,7 +44,6 @@ struct Stack {
 		}
 	}
 
-	// Вывести стек
 	void printStack(const Stack& stack)
 	{
 		StackElem* current = stack.top;
@@ -56,7 +53,6 @@ struct Stack {
 		}
 	}
 
-	// Запись стека в файл
 	void writeStack() {
 		std::string path = "11.3.txt";
 		std::ofstream file_1(path);  // можно открыть файл так, проще
@@ -78,7 +74,6 @@ struct Stack {
 		file_1.close();
 	}
 
-	// Удаление стека
 	void deleteStack() {
 		while (top) {
 			StackElem* temp = top;
@@ -95,17 +90,15 @@ struct Stack {
 			return nullptr;
 		}
 
-		StackElem* tempTop = nullptr;  // временный стек (данные в обратном порядке)
+		StackElem* tempTop = nullptr;
 		int value;
 
-		// Считываем данные и кладём в "вспомогательный стек"
 		while (file >> value) {
 			StackElem* newElem = new StackElem{ value, tempTop };
 			tempTop = newElem;
 		}
 		file.close();
 
-		// Разворачиваем стек обратно, чтобы сохранить порядок
 		StackElem* finalTop = nullptr;
 		while (tempTop) {
 			StackElem* newElem = new StackElem{ tempTop->data, finalTop };
@@ -113,13 +106,12 @@ struct Stack {
 
 			StackElem* toDelete = tempTop;
 			tempTop = tempTop->next;
-			delete toDelete;  // удаляем временный элемент
+			delete toDelete;
 		}
 
 		return finalTop;
 	}
 
-	// Возвращение вершины стека не удаляя её
 	StackElem* peek() {
 		return top;
 	}
@@ -184,7 +176,6 @@ int main() {
 	// Восстановление стека
 	StackElem* restoredTop = stack.RestoreStack("11.3.txt");
 
-	// Оборачиваем в объект Stack
 	Stack restoredStack;
 	restoredStack.top = restoredTop;
 	restoredStack.size = 0;
