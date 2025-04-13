@@ -9,7 +9,6 @@ struct DoubleList {
     DoubleList* prev;
 };
 
-// Функция для печати списка
 void printList(DoubleList* head) {
     int counter = 0;
     while (head) {
@@ -20,7 +19,6 @@ void printList(DoubleList* head) {
     cout << "nullptr\n";
 }
 
-// Функция создания списка
 DoubleList* createList(int n) {
     DoubleList* head = nullptr;
     DoubleList* tail = nullptr;
@@ -42,7 +40,6 @@ DoubleList* createList(int n) {
     return head;
 }
 
-// Функция восстановления списка из файла
 DoubleList* RestoreList(const string& path) {
     ifstream file(path);
     if (!file.is_open()) {
@@ -68,7 +65,6 @@ DoubleList* RestoreList(const string& path) {
     return head;
 }
 
-// Функция удаления по индексу
 void deleteNodeByIndex(DoubleList*& head, int index) {
     if (!head || index < 0) return;
 
@@ -89,7 +85,6 @@ void deleteNodeByIndex(DoubleList*& head, int index) {
     delete current;
 }
 
-// Функция вставки по индексу
 void insertNodeByIndex(DoubleList*& head, int index, int value) {
     DoubleList* newNode = new DoubleList{ value, nullptr, nullptr };
 
@@ -119,7 +114,6 @@ void insertNodeByIndex(DoubleList*& head, int index, int value) {
     current->next = newNode;
 }
 
-// Функция удаления списка
 void deleteList(DoubleList* head) {
     while (head) {
         DoubleList* temp = head;
@@ -129,7 +123,6 @@ void deleteList(DoubleList* head) {
     cout << "The list is empty\n";
 }
 
-// Функция записи списка в файл
 void writeList(DoubleList* head) {
     ofstream file("11.2.txt");
 
@@ -147,7 +140,6 @@ void writeList(DoubleList* head) {
     cout << "List written to file.\n";
 }
 
-// Основная функция
 int main() {
     int n;
     cout << "Enter the number of items: ";
