@@ -22,5 +22,5 @@
 | Интерпроляционный поиск | ✅ | 🕐 | InterpolationSearch |
 | Бинарный поиск | ✅ | 🕐 | BinarySearch |
 | Кнут-Моррис | ✅ | 🕐 | Knuth–Morris–Pratt algorithm |
-| Бойер-Мур |  |  | Boyer–Moore string-search algorithm |
+| Бойер-Мур | ✅ | 🕐 | Boyer–Moore string-search algorithm |
 | **Сумма** | 14 | 88 |  |
