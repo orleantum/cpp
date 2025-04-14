@@ -21,6 +21,5 @@
 | Линейный поиск | ✅ | 🕐 | LinearSearch |
 | Интерпроляционный поиск | ✅ | 🕐 | InterpolationSearch |
 | Бинарный поиск | ✅ | 🕐 | BinarySearch |
-| Кнут-Моррис | ✅ | 🕐 | Knuth–Morris–Pratt algorithm |
-| Бойер-Мур | ✅ | 🕐 | Boyer–Moore string-search algorithm |
+| Кнут-Моррис и Бойер-Мур | ✅ | 🕐 | KMP and BM |
 | **Сумма** | 14 | 88 |  |
