@@ -23,4 +23,6 @@
 | Сложные сортировки | ✅ | 🕐 | ComplexSort |
 | Шелл, Хоар | ✅ | 🕐 | ShellSort, HoareQuickSort |
 | Хэш-таблица | ✅ | 🕐 | HashTable |
+| Классы 1 | ✅ | 🕐 | Classes1 |
+| Классы 2 | ✅ | 🕐 | Classes2 |
 | **Сумма** | 14 | 88 | ✅🕐❌ |
