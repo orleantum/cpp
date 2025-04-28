@@ -42,5 +42,5 @@ int fraction::Ipart()
             cout << "Error: div by zero!" << endl;
             return 0;
         }
-    return static_cast<int>(first / second);
+    return (first / second);
 }
