@@ -5,7 +5,6 @@
 using namespace std;
 
 // Функция для возврата объекта как результата
-
 Student make_Student()
 {
     string name;
