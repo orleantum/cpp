@@ -40,7 +40,7 @@ int fraction::Ipart()
     if (second == 0)
         {
             cout << "Error: div by zero!" << endl;
-            return 0; // Или можно бросить исключение, но пока сделаем просто
+            return 0;
         }
     return static_cast<int>(first / second);
 }
