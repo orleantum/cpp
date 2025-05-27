@@ -23,7 +23,7 @@
 | Сложные сортировки | ✅ | 🕐 | ComplexSort |
 | Шелл, Хоар | ✅ | 🕐 | ShellSort, HoareQuickSort |
 | Шелл, Хоар | ✅ | 🕐 | ShellSort, HoareQuickSort |
-| Многофазная сортировка | ✅ | 🕐 | MultiphaseSorting |
+| Многофазная сортировка | ✅ | 🕐 | MultiphaseSort |
 | Классы 1 | ✅ | ✅ | Classes/Cl. 1 |
 | Классы 2 | ✅ | ✅ | Classes/Cl. 2 |
 | Классы 3 | ✅ | ✅ | Classes/Cl. 3 |
