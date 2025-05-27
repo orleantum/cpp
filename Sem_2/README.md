@@ -22,7 +22,8 @@
 | Алгоритмы Кнута-Морриса-Пратта и Бойера-Мура | ✅ | ✅ | KMP and BM |
 | Сложные сортировки | ✅ | 🕐 | ComplexSort |
 | Шелл, Хоар | ✅ | 🕐 | ShellSort, HoareQuickSort |
-| Хэш-таблица | ✅ | 🕐 | HashTable |
+| Шелл, Хоар | ✅ | 🕐 | ShellSort, HoareQuickSort |
+| Многофазная сортировка | ✅ | 🕐 | MultiphaseSorting |
 | Классы 1 | ✅ | ✅ | Classes/Cl. 1 |
 | Классы 2 | ✅ | ✅ | Classes/Cl. 2 |
 | Классы 3 | ✅ | ✅ | Classes/Cl. 3 |
